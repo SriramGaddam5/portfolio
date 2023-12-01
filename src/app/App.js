@@ -7,7 +7,7 @@ import VIST105 from "/VIST105";
 import ARTS115 from "/ARTS115";
 import Paintings from "/Paintings";
 import Digital from "/Digital";
-import Other from "/Other";
+import Traditional from "/Traditional";
 import Everything from "/Everything";
 
 export default function App() {
@@ -20,7 +20,7 @@ export default function App() {
         <Route path="/ARTS115" element={<ARTS115 />} />
         <Route path="/Paintings" element={<Paintings />} />
         <Route path="/Digital" element={<Digital />} />
-        <Route path="/Other" element={<Other />} />
+        <Route path="/Traditional" element={<Traditional />} />
         <Route path="/Everything" element={<Everything />} />
       </Routes>
     </Router>
