@@ -4,6 +4,7 @@ export default function Footer() {
   return (
     <div class="flex items-center justify-between px-24 py-8">
       <p>© Sriram Gaddam 2023</p>
+      <p>sriramgaddam5@gmail.com</p>
     </div>
   );
 }
