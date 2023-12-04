@@ -2,10 +2,10 @@ import { Flex, Link, Spacer } from "@chakra-ui/react";
 
 function Navbar() {
   return (
-    <Flex>
+    <Flex p={5}>
       <Link href="/showcase">Showcase</Link>
       <Spacer />
-      <Link as="" href="/VIST 105">
+      <Link as="" href="/VIST105">
         VIST 105
       </Link>
       <Spacer />
