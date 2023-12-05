@@ -1,6 +1,6 @@
 import { Heading, Text } from "@chakra-ui/react";
 
-function Navbar() {
+function About() {
   return (
     <div>
       <Heading>About Me</Heading>
@@ -13,4 +13,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default About;

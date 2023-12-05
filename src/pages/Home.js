@@ -1,5 +1,4 @@
-import { Flex, Box, Heading, Text } from "@chakra-ui/react";
-import Navbar from "../components/Navbar";
+import { Flex, Box, Heading, Text, VStack } from "@chakra-ui/react";
 import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
@@ -158,15 +157,16 @@ function Home() {
           },
         }}
       />
-      <Navbar />
-      <Text
-        bgGradient="linear(to-r, blue.200, blue.900)"
-        bgClip="text"
-        fontSize="6xl"
-        fontWeight="extrabold">
-        Sriram Gaddam's Portfolio
-      </Text>
-      <Text>The</Text>
+      <VStack>
+        <Text
+          bgGradient="linear(to-r, blue.200, blue.900)"
+          bgClip="text"
+          fontSize="6xl"
+          fontWeight="extrabold">
+          Sriram Gaddam's Portfolio
+        </Text>
+        <Text>The</Text>
+      </VStack>
     </div>
   );
 }
