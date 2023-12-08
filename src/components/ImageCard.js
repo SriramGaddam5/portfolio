@@ -1,17 +1,24 @@
+import React from "react";
 import {
   Card,
   CardBody,
   CardFooter,
   Image,
   Stack,
+  HStack,
   Heading,
   Text,
   Divider,
+  Tag,
+  Collapse,
   Button,
-  ButtonGroup,
 } from "@chakra-ui/react";
 
 function ImageCard() {
+  const [show, setShow] = React.useState(false);
+
+  const handleToggle = () => setShow(!show);
+
   return (
     <Card maxW="sm">
       <CardBody>
@@ -21,27 +28,26 @@ function ImageCard() {
           borderRadius="lg"
         />
         <Stack mt="6" spacing="3">
-          <Heading size="md">Living room Sofa</Heading>
-          <Text>
-            This sofa is perfect for modern tropical spaces, baroque inspired
-            spaces, earthy toned spaces and for people who love a chic design
-            with a sprinkle of vintage design.
-          </Text>
-          <Text color="blue.600" fontSize="2xl">
-            $450
-          </Text>
+          <HStack justifyContent="space-between">
+            <Heading size="md">Architecture Study</Heading>
+            <Text color="gray.500">11/30/23</Text>
+          </HStack>
+          <Collapse startingHeight={20} in={show}>
+            I feel like I could have made some of the lines a bit straighter and
+            increase the contrast overall.
+          </Collapse>
+          <Button size="sm" onClick={handleToggle} mt="1rem">
+            Show {show ? "Less" : "More"}
+          </Button>
         </Stack>
       </CardBody>
       <Divider />
       <CardFooter>
-        <ButtonGroup spacing="2">
-          <Button variant="solid" colorScheme="blue">
-            Buy now
-          </Button>
-          <Button variant="ghost" colorScheme="blue">
-            Add to cart
-          </Button>
-        </ButtonGroup>
+        <HStack spacing="2">
+          <Tag>Charcoal</Tag>
+          <Tag colorScheme="green">ARTS 115</Tag>
+          <Tag colorScheme="orange">2023 Fall Show</Tag>
+        </HStack>
       </CardFooter>
     </Card>
   );
