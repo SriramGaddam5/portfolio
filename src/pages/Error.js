@@ -1,10 +1,13 @@
-import { Heading, Text } from "@chakra-ui/react";
+import { Heading, HStack, Text } from "@chakra-ui/react";
 
 function Error() {
   return (
     <div>
-      <Heading>Error</Heading>
-      <Text>Page not found</Text>
+      <Heading p="30px">Error</Heading>
+      <HStack p="30px" spacing="5px">
+        <Text color="red.500">{window.location.pathname}</Text>
+        <Text>not found</Text>
+      </HStack>
     </div>
   );
 }

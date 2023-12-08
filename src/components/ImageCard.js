@@ -32,12 +32,12 @@ function ImageCard() {
             <Heading size="md">Architecture Study</Heading>
             <Text color="gray.500">11/30/23</Text>
           </HStack>
-          <Collapse startingHeight={20} in={show}>
+          <Collapse startingHeight={0} in={show}>
             I feel like I could have made some of the lines a bit straighter and
             increase the contrast overall.
           </Collapse>
           <Button size="sm" onClick={handleToggle} mt="1rem">
-            Show {show ? "Less" : "More"}
+            {show ? "Less" : "More"}
           </Button>
         </Stack>
       </CardBody>
