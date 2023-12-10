@@ -7,18 +7,14 @@ function Showcase() {
     <div>
       <Heading p="30px">Showcase</Heading>
       <SimpleGrid minChildWidth="300px" spacing="40px" p="30px">
-        <ImageCard />
-        <ImageCard />
-        <ImageCard />
-        <ImageCard />
-        <ImageCard />
-        <ImageCard />
-        <ImageCard />
-        <ImageCard />
-        <ImageCard />
-        <ImageCard />
-        <ImageCard />
-        <ImageCard />
+        <ImageCard
+          imageSrc="https://raw.githubusercontent.com/SriramGaddam5/portfolio/main/public/images/Skyward.jpg"
+          imageAlt="Self Portrait"
+          imageTitle="Skyward"
+          imageDate="2020"
+          imageDescription="Digital media"
+          imageTags="Digital"
+        />
       </SimpleGrid>
     </div>
   );
