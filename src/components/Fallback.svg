@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-3 {
+        fill: #fff;
+        font-family: Quicksand-Regular, Quicksand;
+        font-size: 120px;
+        font-variation-settings: 'wght' 400;
+      }
+
+      .cls-4 {
+        letter-spacing: 0em;
+      }
+
+      .cls-5 {
+        letter-spacing: -.02em;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="960" y1="57.34" x2="960" y2="1139.71" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#231f20"/>
+    </linearGradient>
+  </defs>
+  <g id="Layer_2" data-name="Layer 2">
+    <rect class="cls-1" width="1920" height="1080"/>
+  </g>
+  <g id="Layer_1" data-name="Layer 1">
+    <text class="cls-3" transform="translate(448.99 577.74)"><tspan x="0" y="0">Ima</tspan><tspan class="cls-5" x="212.16" y="0">g</tspan><tspan class="cls-4" x="284.64" y="0">e not </tspan><tspan class="cls-2" x="600.47" y="0">f</tspan><tspan x="639.23" y="0">ound :(</tspan></text>
+  </g>
+</svg>

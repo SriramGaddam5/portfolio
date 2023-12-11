@@ -13,6 +13,7 @@ import {
   Collapse,
   Button,
 } from "@chakra-ui/react";
+import FallbackImage from "./Fallback.svg";
 
 function ImageCard({
   imageSrc,
@@ -29,7 +30,12 @@ function ImageCard({
   return (
     <Card maxW="sm">
       <CardBody>
-        <Image src={imageSrc} alt={imageAlt} borderRadius="lg" />
+        <Image
+          src={imageSrc}
+          fallbackSrc={FallbackImage}
+          alt={imageAlt}
+          borderRadius="lg"
+        />
         <Stack mt="6" spacing="3">
           <HStack justifyContent="space-between">
             <Heading size="md">{imageTitle}</Heading>
@@ -46,10 +52,8 @@ function ImageCard({
       <Divider />
       <CardFooter>
         <HStack spacing="2">
-          <Tag colorScheme="blue">{imageTags}</Tag>
-          {/* {imageTags.map((tag) => (
-            <Tag colorScheme="blue">{tag}</Tag>
-          ))} */}
+          {Array.isArray(imageTags) &&
+            imageTags.map((tag) => <Tag colorScheme="blue">{tag}</Tag>)}
         </HStack>
       </CardFooter>
     </Card>
