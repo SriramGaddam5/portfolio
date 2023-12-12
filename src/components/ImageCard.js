@@ -13,7 +13,7 @@ import {
   Collapse,
   Button,
 } from "@chakra-ui/react";
-import FallbackImage from "./Fallback.svg";
+import FallbackImage from "../images/Fallback.svg";
 
 function ImageCard({
   imageSrc,
@@ -28,13 +28,16 @@ function ImageCard({
   const handleToggle = () => setShow(!show);
 
   return (
-    <Card maxW="sm">
+    <Card
+      maxW="sm"
+      shadow="xl"
+      _hover={{ shadow: "2xl", transform: "scale(0.99)" }}>
       <CardBody>
         <Image
           src={imageSrc}
           fallbackSrc={FallbackImage}
           alt={imageAlt}
-          borderRadius="lg"
+          rounded="xl"
         />
         <Stack mt="6" spacing="3">
           <HStack justifyContent="space-between">
