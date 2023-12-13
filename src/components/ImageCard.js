@@ -8,7 +8,7 @@ import {
   HStack,
   Heading,
   Text,
-  Divider,
+  Tooltip,
   Tag,
   Collapse,
   Button,
@@ -33,16 +33,22 @@ function ImageCard({
       shadow="xl"
       _hover={{ shadow: "2xl", transform: "scale(0.99)" }}>
       <CardBody>
-        <Image
-          src={imageSrc}
-          fallbackSrc={FallbackImage}
-          alt={imageAlt}
-          rounded="xl"
-        />
+        <Tooltip label={imageAlt} rounded="lg">
+          <Image
+            src={imageSrc}
+            fallbackSrc={FallbackImage}
+            alt={imageAlt}
+            rounded="xl"
+          />
+        </Tooltip>
         <Stack mt="6" spacing="3">
           <HStack justifyContent="space-between">
             <Heading size="md">{imageTitle}</Heading>
-            <Text color="gray.500">{imageDate}</Text>
+            <Tooltip label={new Date(imageDate).toDateString()} rounded="lg">
+              <Text color="gray.500" fontSize="sm">
+                {imageDate}
+              </Text>
+            </Tooltip>
           </HStack>
           <Collapse startingHeight={0} in={show}>
             {imageDescription}
@@ -52,7 +58,6 @@ function ImageCard({
           </Button>
         </Stack>
       </CardBody>
-      <Divider />
       <CardFooter>
         <HStack spacing="2">
           {Array.isArray(imageTags) &&

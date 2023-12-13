@@ -12,6 +12,7 @@ import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import "./Home.css";
 import FallbackImage from "../images/Fallback.svg";
+import CoverArt from "../images/Sriram Gaddam - Drapery with Metallic & Glass Objects.jpg";
 
 function Home() {
   const particlesInit = useCallback(async (engine) => {
@@ -173,7 +174,8 @@ function Home() {
           bgGradient="linear(to-r, blue.200, blue.900)"
           bgClip="text"
           fontSize="6xl"
-          fontWeight="extrabold">
+          fontWeight="extrabold"
+          mt={10}>
           Sriram Gaddam's Portfolio
         </Text>
         <LinkBox
@@ -184,7 +186,7 @@ function Home() {
           _hover={{ shadow: "2xl", transform: "scale(0.99)" }}>
           <HStack>
             <Image
-              src="https://cdn.myportfolio.com/1065dff4-b97e-473f-a700-77c555b965fc/907d2bc4-391a-4223-afcd-c8fa6252b74d_rw_1920.jpg?h=1d8300ce4dfedcde1f0019c924db1073"
+              src={CoverArt}
               maxW={{ base: "100%", sm: "200px" }}
               fallbackSrc={FallbackImage}
               alt="Cover Image"
