@@ -8,7 +8,10 @@ import InfoCard from "../components/InfoCard";
 import ImageCarousel from "../components/ImageCarousel";
 import Unity from "../images/logos/Unity.png";
 import PlasticSCM from "../images/logos/PlasticSCM.ico";
+import Git from "../images/logos/Git.ico";
 import Pycharm from "../images/logos/Pycharm.ico";
+import CreativeCloud from "../images/logos/CreativeCloud.ico";
+import Illustrator from "../images/logos/Illustrator.ico";
 import "../styles/Home.css";
 
 function Home() {
@@ -157,7 +160,9 @@ function Home() {
           mt={10}>
           Sriram Gaddam's Portfolio
         </Text>
-        <ImageCarousel logoList={[Unity, PlasticSCM, Pycharm]} />
+        <ImageCarousel
+          logoList={[Unity, PlasticSCM, Git, Pycharm, CreativeCloud]}
+        />
         <HStack gap={20}>
           <InfoCard
             imageSrc={ShowcaseCover}
