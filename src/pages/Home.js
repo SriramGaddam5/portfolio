@@ -1,18 +1,15 @@
-import {
-  LinkBox,
-  LinkOverlay,
-  Heading,
-  Image,
-  Text,
-  VStack,
-  HStack,
-} from "@chakra-ui/react";
+import { Text, VStack, HStack } from "@chakra-ui/react";
 import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import "./Home.css";
-import FallbackImage from "../images/Fallback.svg";
-import CoverArt from "../images/Sriram Gaddam - Drapery with Metallic & Glass Objects.jpg";
+import ShowcaseCover from "../images/Sriram Gaddam - Drapery with Metallic & Glass Objects.jpg";
+import AboutCover from "../images/Sriram Gaddam - Drawing Architecture.jpg";
+import InfoCard from "../components/InfoCard";
+import ImageCarousel from "../components/ImageCarousel";
+import Unity from "../images/logos/Unity.png";
+import PlasticSCM from "../images/logos/PlasticSCM.ico";
+import Pycharm from "../images/logos/Pycharm.ico";
+import "../styles/Home.css";
 
 function Home() {
   const particlesInit = useCallback(async (engine) => {
@@ -25,9 +22,9 @@ function Home() {
   }, []);
 
   return (
-    <div>
+    <div id="Body">
       <Particles
-        id="tsparticles"
+        id="particles"
         init={particlesInit}
         loaded={particlesLoaded}
         options={{
@@ -37,7 +34,7 @@ function Home() {
           },
           particles: {
             number: {
-              value: 100,
+              value: 200,
               limit: 300,
               density: {
                 enable: true,
@@ -50,35 +47,30 @@ function Home() {
             shape: {
               type: "polygon",
               stroke: {
-                width: 0,
+                width: 1,
                 color: "#ffffff",
               },
               polygon: {
                 nb_sides: 6,
               },
-              image: {
-                src: "images/github.svg",
-                width: 100,
-                height: 100,
-              },
             },
             opacity: {
-              value: 0.4,
+              value: 0,
               random: true,
               anim: {
                 enable: true,
                 speed: 1,
-                opacity_min: 0.1,
+                opacity_min: 0,
                 sync: false,
               },
             },
             size: {
-              value: { min: 0, max: 30 },
+              value: { min: 1, max: 5 },
               random: true,
               anim: {
                 enable: true,
                 speed: 10,
-                size_min: 10,
+                size_min: 1,
                 sync: false,
               },
             },
@@ -123,27 +115,15 @@ function Home() {
               resize: true,
             },
             modes: {
-              grab: {
-                distance: 400,
-                lineLinked: {
-                  opacity: 1,
-                },
-              },
               bubble: {
-                distance: 50,
-                size: 40,
+                distance: 30,
+                size: 20,
                 duration: 2,
                 opacity: 1,
                 speed: 2,
               },
-              repulse: {
-                distance: 50,
-              },
               push: {
                 particles_nb: 1,
-              },
-              remove: {
-                particles_nb: 2,
               },
             },
           },
@@ -152,9 +132,9 @@ function Home() {
             cover: {
               color: {
                 value: {
-                  r: 246,
-                  g: 249,
-                  b: 252,
+                  r: 255,
+                  g: 255,
+                  b: 255,
                 },
               },
               opacity: 1,
@@ -168,7 +148,6 @@ function Home() {
           },
         }}
       />
-
       <VStack>
         <Text
           bgGradient="linear(to-r, blue.200, blue.900)"
@@ -178,28 +157,23 @@ function Home() {
           mt={10}>
           Sriram Gaddam's Portfolio
         </Text>
-        <LinkBox
-          maxW="sm"
-          my="10"
-          rounded="lg"
-          shadow="xl"
-          _hover={{ shadow: "2xl", transform: "scale(0.99)" }}>
-          <HStack>
-            <Image
-              src={CoverArt}
-              maxW={{ base: "100%", sm: "200px" }}
-              fallbackSrc={FallbackImage}
-              alt="Cover Image"
-              borderRadius="lg"
-            />
-            <VStack alignContent="top">
-              <Heading size="md" my="2">
-                <LinkOverlay href="/showcase">My work</LinkOverlay>
-              </Heading>
-              <Text>See my past works and projects I worked on.</Text>
-            </VStack>
-          </HStack>
-        </LinkBox>
+        <ImageCarousel logoList={[Unity, PlasticSCM, Pycharm]} />
+        <HStack gap={20}>
+          <InfoCard
+            imageSrc={ShowcaseCover}
+            imageAlt="Drapery with Metallic & Glass Objects"
+            cardTitle="My work"
+            cardDescription="See my past works and projects I worked on"
+            cardLink="/showcase"
+          />
+          <InfoCard
+            imageSrc={AboutCover}
+            imageAlt="Sriram Gaddam"
+            cardTitle="About me"
+            cardDescription="Learn more about me"
+            cardLink="/about"
+          />
+        </HStack>
       </VStack>
     </div>
   );

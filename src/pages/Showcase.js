@@ -1,16 +1,16 @@
 import { Wrap, WrapItem, Heading } from "@chakra-ui/react";
 import ImageCard from "../components/ImageCard";
-import "./Showcase.css";
 import Skyward from "../images/Skyward.jpg";
 import Drapery from "../images/Sriram Gaddam - Drapery with Metallic & Glass Objects.jpg";
 import Architecture from "../images/Sriram Gaddam - Drawing Architecture.jpg";
 import FinalAssignment from "../images/Sriram Gaddam - Final Assignment.jpg";
 import SelfPortrait from "../images/Sriram Gaddam - Self Portrait.jpg";
 import NonObjective from "../images/Sriram Gaddam - Project 9 Non-Objective Story and Animation.png";
+import "../styles/Showcase.css";
 
 function Showcase() {
   return (
-    <div>
+    <div id="Body">
       <Heading p="30px">Showcase</Heading>
       <Wrap p={20}>
         <WrapItem>
