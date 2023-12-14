@@ -37,10 +37,6 @@ function ImageCard({
           shadow: "2xl",
           transform: "scale(0.99)",
           bgColor: "gray.50",
-        }}
-        _active={{
-          transform: "scale(1.01)",
-          bgColor: "white",
         }}>
         <CardBody>
           <Tooltip label={imageAlt} rounded="lg">
@@ -63,9 +59,11 @@ function ImageCard({
             <Collapse startingHeight={0} in={show}>
               {imageDescription}
             </Collapse>
-            <Button size="sm" onClick={handleToggle} mt="1rem">
-              {show ? "Less" : "More"}
-            </Button>
+            <Tooltip label={show ? "See less" : "See more"} rounded="lg">
+              <Button size="sm" onClick={handleToggle} mt="1rem">
+                {show ? "Less" : "More"}
+              </Button>
+            </Tooltip>
           </Stack>
         </CardBody>
         <CardFooter>

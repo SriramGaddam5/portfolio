@@ -14,6 +14,9 @@ function ImageCarousel({ logoList }) {
                 maxW={100}
                 fallbackSrc={FallbackImage}
                 alt="Logo"
+                _hover={{
+                  transform: "scale(0.99)",
+                }}
               />
             </Tooltip>
           ))}
