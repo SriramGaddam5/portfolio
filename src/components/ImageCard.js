@@ -49,7 +49,9 @@ function ImageCard({
           </Tooltip>
           <Stack mt="6" spacing="3">
             <HStack justifyContent="space-between">
-              <Heading size="md">{imageTitle}</Heading>
+              <Tooltip label={imageTitle} rounded="lg">
+                <Heading size="md">{imageTitle}</Heading>
+              </Tooltip>
               <Tooltip label={new Date(imageDate).toDateString()} rounded="lg">
                 <Text color="gray.500" fontSize="sm">
                   {imageDate}
@@ -69,7 +71,11 @@ function ImageCard({
         <CardFooter>
           <HStack spacing="2">
             {Array.isArray(imageTags) &&
-              imageTags.map((tag) => <Tag colorScheme="blue">{tag}</Tag>)}
+              imageTags.map((tag) => (
+                <Tooltip label={tag} rounded="lg">
+                  <Tag colorScheme="blue">{tag}</Tag>
+                </Tooltip>
+              ))}
           </HStack>
         </CardFooter>
       </Card>
