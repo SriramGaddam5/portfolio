@@ -161,7 +161,13 @@ function Home() {
           Sriram Gaddam's Portfolio
         </Text>
         <ImageCarousel
-          logoList={[Unity, PlasticSCM, Git, Pycharm, CreativeCloud]}
+          logoList={[
+            [Unity, "Unity Logo"],
+            [PlasticSCM, "PlasticSCM Logo"],
+            [Git, "Git Logo"],
+            [Pycharm, "Pycharm Logo"],
+            [CreativeCloud, "Adobe Creative Cloud Logo"],
+          ]}
         />
         <HStack gap={20}>
           <InfoCard

@@ -12,6 +12,14 @@ import {
   Tag,
   Collapse,
   Button,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
+  ModalFooter,
+  useDisclosure,
 } from "@chakra-ui/react";
 import FallbackImage from "../images/Fallback.svg";
 import "../styles/ImageCard.css";
@@ -25,8 +33,9 @@ function ImageCard({
   imageTags,
 }) {
   const [show, setShow] = React.useState(false);
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const handleToggle = () => setShow(!show);
+  const handleDescToggle = () => setShow(!show);
 
   return (
     <div id="ImageCard">
@@ -45,6 +54,15 @@ function ImageCard({
               fallbackSrc={FallbackImage}
               alt={imageAlt}
               rounded="xl"
+              _hover={{
+                shadow: "2xl",
+                transform: "scale(0.99)",
+              }}
+              _active={{
+                shadow: "xl",
+                transform: "scale(1.01)",
+              }}
+              onClick={onOpen}
             />
           </Tooltip>
           <Stack mt="6" spacing="3">
@@ -62,7 +80,7 @@ function ImageCard({
               {imageDescription}
             </Collapse>
             <Tooltip label={show ? "See less" : "See more"} rounded="lg">
-              <Button size="sm" onClick={handleToggle} mt="1rem">
+              <Button size="sm" onClick={handleDescToggle} mt="1rem">
                 {show ? "Less" : "More"}
               </Button>
             </Tooltip>
@@ -79,6 +97,20 @@ function ImageCard({
           </HStack>
         </CardFooter>
       </Card>
+
+      <Modal isOpen={isOpen} onClose={onClose} rounded="xl">
+        <ModalOverlay />
+        <ModalContent>
+          <ModalBody>
+            <Image
+              src={imageSrc}
+              fallbackSrc={FallbackImage}
+              alt={imageAlt}
+              rounded="xl"
+            />
+          </ModalBody>
+        </ModalContent>
+      </Modal>
     </div>
   );
 }

@@ -8,9 +8,9 @@ function ImageCarousel({ logoList }) {
       <HStack spacing={2}>
         {Array.isArray(logoList) &&
           logoList.map((logo) => (
-            <Tooltip label="Logo" rounded="lg">
+            <Tooltip label={logo[1]} rounded="lg">
               <Image
-                src={logo}
+                src={logo[0]}
                 maxW={100}
                 fallbackSrc={FallbackImage}
                 alt="Logo"
