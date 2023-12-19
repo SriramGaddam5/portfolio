@@ -9,8 +9,6 @@ import {
   ListItem,
   Tooltip,
 } from "@chakra-ui/react";
-import ProfilePicture from "../images/Profile.jpg";
-import FallbackImage from "../images/Fallback.svg";
 import { TbVaccine } from "react-icons/tb";
 import { FaVirus } from "react-icons/fa";
 import { IoEarth } from "react-icons/io5";
@@ -24,9 +22,9 @@ function About() {
       <HStack mx="5" my="10">
         <Tooltip label="Sriram Gaddam" rounded="lg">
           <Image
-            src={ProfilePicture}
+            src="/images/Profile.jpg"
             width={250}
-            fallbackSrc={FallbackImage}
+            fallbackSrc="/images/Fallback.svg"
             alt="Sriram Gaddam"
             rounded="xl"
           />

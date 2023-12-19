@@ -9,7 +9,6 @@ import {
   HStack,
   Tooltip,
 } from "@chakra-ui/react";
-import FallbackImage from "../images/Fallback.svg";
 import "../styles/InfoCard.css";
 
 function InfoCard({
@@ -19,6 +18,7 @@ function InfoCard({
   cardDescription,
   cardLink,
 }) {
+  console.log(imageSrc);
   return (
     <div id="InfoCard">
       <Tooltip label={cardDescription} rounded="lg">
@@ -40,7 +40,7 @@ function InfoCard({
             <Image
               src={imageSrc}
               maxW={{ base: "100%", sm: "200px" }}
-              fallbackSrc={FallbackImage}
+              fallbackSrc="/images/Fallback.svg"
               alt={imageAlt}
               borderRadius="lg"
             />

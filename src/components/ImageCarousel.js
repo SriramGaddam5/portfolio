@@ -1,6 +1,5 @@
 import { HStack, Image, Tooltip } from "@chakra-ui/react";
 import "../styles/ImageCarousel.css";
-import FallbackImage from "../images/Fallback.svg";
 
 function ImageCarousel({ logoList }) {
   return (
@@ -11,9 +10,9 @@ function ImageCarousel({ logoList }) {
             <Tooltip label={logo[1]} rounded="lg">
               <Image
                 src={logo[0]}
+                fallbackSrc="/images/Fallback.svg"
                 maxW={100}
-                fallbackSrc={FallbackImage}
-                alt="Logo"
+                alt={logo[1]}
                 _hover={{
                   transform: "scale(0.99)",
                 }}

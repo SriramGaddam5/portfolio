@@ -1,8 +1,63 @@
-{
-  "imageSrc": "",
-  "imageAlt": "",
-  "imageTitle": "",
-  "imageDate": "",
-  "imageDescription": "",
-  "imageTags": ""
-}
+[
+  {
+    "imageData": [
+      {
+        "imageSrc": "/images/Skyward.jpg",
+        "imageAlt": "Low poly digital Self Portrait",
+        "imageTitle": "Skyward",
+        "imageDate": "4-12-2021",
+        "imageDescription": "Low poly self portrait from ART II - Digital Art & Media I created in Adobe Photoshop.",
+        "imageTags": [
+          ["Digital", "blue"],
+          ["Self Portrait", "cyan"]
+        ]
+      },
+      {
+        "imageSrc": "/images/Sriram Gaddam - Drapery with Metallic & Glass Objects.jpg",
+        "imageAlt": "Drapery with Metallic & Glass Objects",
+        "imageTitle": "Drapery with Metallic & Glass Objects",
+        "imageDate": "12-5-2023",
+        "imageDescription": "Charcoal drawing from ARTS 115",
+        "imageTags": [["Charcoal", "gray"]]
+      },
+      {
+        "imageSrc": "/images/Sriram Gaddam - Drawing Architecture.jpg",
+        "imageAlt": "2 point perspective charcoal drawing of Texas A&M department of entomology building",
+        "imageTitle": "Drawing Architecture",
+        "imageDate": "12-5-2023",
+        "imageDescription": "2 point perspective charcoal drawing of Texas A&M department of entomology building from ARTS 115",
+        "imageTags": [["Charcoal", "gray"]]
+      },
+      {
+        "imageSrc": "/images/Sriram Gaddam - Final Assignment.jpg",
+        "imageAlt": "Self Portrait",
+        "imageTitle": "Self Portrait",
+        "imageDate": "12-5-2023",
+        "imageDescription": "Final Assignment from ARTS 115",
+        "imageTags": [
+          ["Charcoal", "gray"],
+          ["Self Portrait", "cyan"]
+        ]
+      },
+      {
+        "imageSrc": "/images/Sriram Gaddam - Self Portrait.jpg",
+        "imageAlt": "Self Portrait",
+        "imageTitle": "Self Portrait",
+        "imageDate": "12-5-2023",
+        "imageDescription": "Self Portrait from ARTS 115",
+        "imageTags": [
+          ["Charcoal", "gray"],
+          ["Self Portrait", "cyan"]
+        ]
+      },
+      {
+        "imageSrc": "/images/Sriram Gaddam - Project 9 Non-Objective Story and Animation.png",
+        "imageAlt": "Four bristol four inch square panels mounted on black matboard.",
+        "imageTitle": "Non-Objective Story",
+        "imageDate": "12-5-2023",
+        "imageDescription": "Each panel represents a sentence in a non-objective story.",
+        "imageTags": [["Color Pencil", "red"]]
+      }
+    ]
+  }
+]

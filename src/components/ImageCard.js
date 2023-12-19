@@ -21,7 +21,6 @@ import {
   ModalFooter,
   useDisclosure,
 } from "@chakra-ui/react";
-import FallbackImage from "../images/Fallback.svg";
 import "../styles/ImageCard.css";
 
 function ImageCard({
@@ -51,7 +50,7 @@ function ImageCard({
           <Tooltip label={imageAlt} rounded="lg">
             <Image
               src={imageSrc}
-              fallbackSrc={FallbackImage}
+              fallbackSrc="/images/Fallback.svg"
               alt={imageAlt}
               rounded="xl"
               _hover={{
@@ -90,8 +89,8 @@ function ImageCard({
           <HStack spacing="2">
             {Array.isArray(imageTags) &&
               imageTags.map((tag) => (
-                <Tooltip label={tag} rounded="lg">
-                  <Tag colorScheme="blue">{tag}</Tag>
+                <Tooltip label={tag[0]} rounded="lg">
+                  <Tag colorScheme={tag[1]}>{tag[0]}</Tag>
                 </Tooltip>
               ))}
           </HStack>
@@ -104,7 +103,7 @@ function ImageCard({
           <ModalBody>
             <Image
               src={imageSrc}
-              fallbackSrc={FallbackImage}
+              fallbackSrc="/images/Fallback.svg"
               alt={imageAlt}
               rounded="xl"
             />

@@ -2,16 +2,8 @@ import { Text, VStack, HStack } from "@chakra-ui/react";
 import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import ShowcaseCover from "../images/Sriram Gaddam - Drapery with Metallic & Glass Objects.jpg";
-import AboutCover from "../images/Sriram Gaddam - Drawing Architecture.jpg";
 import InfoCard from "../components/InfoCard";
 import ImageCarousel from "../components/ImageCarousel";
-import Unity from "../images/logos/Unity.png";
-import PlasticSCM from "../images/logos/PlasticSCM.ico";
-import Git from "../images/logos/Git.ico";
-import Pycharm from "../images/logos/Pycharm.ico";
-import CreativeCloud from "../images/logos/CreativeCloud.ico";
-import Illustrator from "../images/logos/Illustrator.ico";
 import "../styles/Home.css";
 
 function Home() {
@@ -162,24 +154,24 @@ function Home() {
         </Text>
         <ImageCarousel
           logoList={[
-            [Unity, "Unity Logo"],
-            [PlasticSCM, "PlasticSCM Logo"],
-            [Git, "Git Logo"],
-            [Pycharm, "Pycharm Logo"],
-            [CreativeCloud, "Adobe Creative Cloud Logo"],
+            ["/images/logos/Unity.png", "Unity Logo"],
+            ["/images/logos/PlasticSCM.ico", "PlasticSCM Logo"],
+            ["/images/logos/Git.ico", "Git Logo"],
+            ["/images/logos/Pycharm.ico", "Pycharm Logo"],
+            ["/images/logos/CreativeCloud.ico", "Adobe Creative Cloud Logo"],
           ]}
         />
         <HStack gap={20}>
           <InfoCard
-            imageSrc={ShowcaseCover}
+            imageSrc="/images/Sriram Gaddam - Drapery with Metallic & Glass Objects.jpg"
             imageAlt="Drapery with Metallic & Glass Objects"
             cardTitle="My work"
             cardDescription="See my past works and projects I worked on"
             cardLink="/showcase"
           />
           <InfoCard
-            imageSrc={AboutCover}
-            imageAlt="Sriram Gaddam"
+            imageSrc="/images/Skyward.jpg"
+            imageAlt="Self Portrait"
             cardTitle="About me"
             cardDescription="Learn more about me"
             cardLink="/about"
