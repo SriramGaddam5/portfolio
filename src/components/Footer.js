@@ -9,7 +9,8 @@ function Footer() {
         <Spacer />
         <Tooltip label="Send me an email" rounded="lg">
           <Link
-            href="mailto:sriramgaddam5@gmail.com?&subject=Some catchy subject line&body=Type something here maybe or not"
+            href="https://mailto:sriramgaddam5@gmail.com?subject=some%20catchy%20subject%20line&body=write%20something%20here..."
+            isExternal
             p="1"
             _hover={{ color: "blue.50", transform: "scale(0.99)" }}
             _active={{ color: "blue.100", transform: "scale(1.01)" }}>
@@ -17,7 +18,7 @@ function Footer() {
           </Link>
         </Tooltip>
         <Tooltip label="Check out my GitHub" rounded="lg">
-          <Link href="https://github.com/SriramGaddam5">
+          <Link href="https://github.com/SriramGaddam5" isExternal>
             <Box
               px="2"
               py="1"
@@ -31,7 +32,9 @@ function Footer() {
           </Link>
         </Tooltip>
         <Tooltip label="Look at my LinkedIn" rounded="lg">
-          <Link href="https://www.linkedin.com/in/sriram-gaddam-1819841bb">
+          <Link
+            href="https://www.linkedin.com/in/sriram-gaddam-1819841bb"
+            isExternal>
             <Box
               px="2"
               py="1"
