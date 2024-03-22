@@ -1,0 +1,31 @@
+[
+  {
+    "logoData": [
+      {
+        "uid": "0",
+        "imageSrc": "/images/logos/Unity.png",
+        "imageAlt": "Unity Logo"
+      },
+      {
+        "uid": "1",
+        "imageSrc": "/images/logos/PlasticSCM.ico",
+        "imageAlt": "PlasticSCM Logo"
+      },
+      {
+        "uid": "2",
+        "imageSrc": "/images/logos/Git.ico",
+        "imageAlt": "Git Logo"
+      },
+      {
+        "uid": "3",
+        "imageSrc": "/images/logos/Pycharm.ico",
+        "imageAlt": "Pycharm Logo"
+      },
+      {
+        "uid": "4",
+        "imageSrc": "/images/logos/CreativeCloud.ico",
+        "imageAlt": "Adobe Creative Cloud Logo"
+      }
+    ]
+  }
+]

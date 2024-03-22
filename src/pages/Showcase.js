@@ -11,6 +11,7 @@ function Showcase() {
         {imageData[0].imageData.map((image) => (
           <WrapItem>
             <ImageCard
+              key={image.uid}
               imageSrc={image.imageSrc}
               imageAlt={image.imageAlt}
               imageTitle={image.imageTitle}

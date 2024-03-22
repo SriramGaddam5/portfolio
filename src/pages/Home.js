@@ -2,9 +2,11 @@ import { Text, VStack, HStack } from "@chakra-ui/react";
 import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
+// import { loadPolygonPath } from "@tsparticles/path-polygon";
 import InfoCard from "../components/InfoCard";
 import ImageCarousel from "../components/ImageCarousel";
 import "../styles/Home.css";
+import logoData from "../logoData.json";
 
 function Home() {
   const particlesInit = useCallback(async (engine) => {
@@ -16,6 +18,9 @@ function Home() {
     await console.log(container);
   }, []);
 
+  console.log([
+    logoData[0].logoData.map((logo) => [logo.imageSrc, logo.imageAlt]),
+  ]);
   return (
     <div id="Body">
       <Particles
@@ -141,6 +146,79 @@ function Home() {
             image:
               "url('https://static.vecteezy.com/system/resources/thumbnails/001/217/366/small/polygonal-blue-background.jpg')",
           },
+          // particles: {
+          //   color: {
+          //     value: "#FF0000",
+          //     animation: {
+          //       enable: true,
+          //       speed: 10,
+          //     },
+          //   },
+          //   move: {
+          //     direction: "none",
+          //     enable: true,
+          //     outModes: {
+          //       default: "destroy",
+          //     },
+          //     path: {
+          //       clamp: false,
+          //       enable: true,
+          //       delay: {
+          //         value: 0,
+          //       },
+          //       generator: "polygonPathGenerator",
+          //       options: {
+          //         sides: 6,
+          //         turnSteps: 30,
+          //         angle: 30,
+          //       },
+          //     },
+          //     random: false,
+          //     speed: 3,
+          //     straight: false,
+          //     trail: {
+          //       fill: {
+          //         color: "#000000",
+          //       },
+          //       length: 20,
+          //       enable: true,
+          //     },
+          //   },
+          //   number: {
+          //     value: 0,
+          //   },
+          //   opacity: {
+          //     value: 1,
+          //   },
+          //   shape: {
+          //     type: "circle",
+          //   },
+          //   size: {
+          //     value: 2,
+          //   },
+          // },
+          // background: {
+          //   color: "#000000",
+          // },
+          // fullScreen: {
+          //   enable: false,
+          //   zIndex: -1,
+          // },
+          // emitters: {
+          //   direction: "none",
+          //   rate: {
+          //     quantity: 1,
+          //     delay: 0.25,
+          //   },
+          //   size: {
+          //     width: 0,
+          //     height: 0,
+          //   },
+          //   position: {
+          //     x: 50,
+          //     y: 50,
+          //   },
+          // },
         }}
       />
       <VStack>
@@ -154,11 +232,7 @@ function Home() {
         </Text>
         <ImageCarousel
           logoList={[
-            ["/images/logos/Unity.png", "Unity Logo"],
-            ["/images/logos/PlasticSCM.ico", "PlasticSCM Logo"],
-            ["/images/logos/Git.ico", "Git Logo"],
-            ["/images/logos/Pycharm.ico", "Pycharm Logo"],
-            ["/images/logos/CreativeCloud.ico", "Adobe Creative Cloud Logo"],
+            logoData[0].logoData.map((logo) => [logo.imageSrc, logo.imageAlt]),
           ]}
         />
         <HStack gap={20}>

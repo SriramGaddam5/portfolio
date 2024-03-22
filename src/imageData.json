@@ -2,6 +2,7 @@
   {
     "imageData": [
       {
+        "uid": "0",
         "imageSrc": "/images/Skyward.jpg",
         "imageAlt": "Low poly digital Self Portrait",
         "imageTitle": "Skyward",
@@ -13,6 +14,7 @@
         ]
       },
       {
+        "uid": "1",
         "imageSrc": "/images/Sriram Gaddam - Drapery with Metallic & Glass Objects.jpg",
         "imageAlt": "Drapery with Metallic & Glass Objects",
         "imageTitle": "Drapery with Metallic & Glass Objects",
@@ -21,6 +23,7 @@
         "imageTags": [["Charcoal", "gray"]]
       },
       {
+        "uid": "2",
         "imageSrc": "/images/Sriram Gaddam - Drawing Architecture.jpg",
         "imageAlt": "2 point perspective charcoal drawing of Texas A&M department of entomology building",
         "imageTitle": "Drawing Architecture",
@@ -29,6 +32,7 @@
         "imageTags": [["Charcoal", "gray"]]
       },
       {
+        "uid": "3",
         "imageSrc": "/images/Sriram Gaddam - Final Assignment.jpg",
         "imageAlt": "Self Portrait",
         "imageTitle": "Self Portrait",
@@ -40,6 +44,7 @@
         ]
       },
       {
+        "uid": "4",
         "imageSrc": "/images/Sriram Gaddam - Self Portrait.jpg",
         "imageAlt": "Self Portrait",
         "imageTitle": "Self Portrait",
@@ -51,6 +56,7 @@
         ]
       },
       {
+        "uid": "5",
         "imageSrc": "/images/Sriram Gaddam - Project 9 Non-Objective Story and Animation.png",
         "imageAlt": "Four bristol four inch square panels mounted on black matboard.",
         "imageTitle": "Non-Objective Story",
