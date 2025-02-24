@@ -9,7 +9,7 @@ import {
   ListItem,
   Tooltip,
 } from "@chakra-ui/react";
-import ProfilePicture from "../images/Profile.jpg";
+import ProfilePicture from "../images/Profile.png";
 import FallbackImage from "../images/Fallback.svg";
 import { TbVaccine } from "react-icons/tb";
 import { FaVirus } from "react-icons/fa";
@@ -25,7 +25,7 @@ function About() {
         <Tooltip label="Sriram Gaddam" rounded="lg">
           <Image
             src={ProfilePicture}
-            width={250}
+            width="400px"
             fallbackSrc={FallbackImage}
             alt="Sriram Gaddam"
             rounded="xl"
@@ -39,7 +39,8 @@ function About() {
           programming you can see some of my projects{" "}
           <Tooltip
             label="a bunch of PJS animations, art, and games"
-            rounded="lg">
+            rounded="lg"
+          >
             <Link
               color="blue.500"
               href="https://www.khanacademy.org/profile/kaid_27778265738214400478373/projects"
@@ -48,7 +49,8 @@ function About() {
               }}
               _active={{
                 color: "blue.300",
-              }}>
+              }}
+            >
               here
             </Link>
           </Tooltip>
@@ -65,10 +67,21 @@ function About() {
                   }}
                   _active={{
                     color: "blue.300",
-                  }}>
+                  }}
+                >
                   Chronicles of Contagion
                 </Link>
               </Tooltip>
+              <iframe
+                frameborder="0"
+                src="https://itch.io/embed/2368589"
+                width="552"
+                height="167"
+              >
+                <a href="https://pineapple120.itch.io/chronicles-of-contagion">
+                  Chronicles of Contagion by Pineapple120
+                </a>
+              </iframe>
             </ListItem>
             <ListItem>
               <ListIcon as={IoEarth} color="blue.600" />
@@ -81,7 +94,8 @@ function About() {
                   }}
                   _active={{
                     color: "blue.300",
-                  }}>
+                  }}
+                >
                   Horizon
                 </Link>
               </Tooltip>
@@ -90,7 +104,8 @@ function About() {
               <ListIcon as={FaVirus} color="green.500" />
               <Tooltip
                 label="defend your body from an onslaught of viruses"
-                rounded="lg">
+                rounded="lg"
+              >
                 <Link
                   color="blue.500"
                   href="https://medipeakapps.itch.io/corona-defenders"
@@ -99,7 +114,8 @@ function About() {
                   }}
                   _active={{
                     color: "blue.300",
-                  }}>
+                  }}
+                >
                   Corona Defenders
                 </Link>
               </Tooltip>
@@ -115,7 +131,8 @@ function About() {
                   }}
                   _active={{
                     color: "blue.300",
-                  }}>
+                  }}
+                >
                   Hexagen
                 </Link>
               </Tooltip>
@@ -131,7 +148,8 @@ function About() {
                   }}
                   _active={{
                     color: "blue.300",
-                  }}>
+                  }}
+                >
                   Inventory Crafting System
                 </Link>
               </Tooltip>
