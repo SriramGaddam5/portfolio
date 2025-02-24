@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import {
   LinkBox,
   LinkOverlay,
@@ -8,8 +8,9 @@ import {
   VStack,
   HStack,
   Tooltip,
+  ScaleFade,
 } from "@chakra-ui/react";
-import FallbackImage from "../images/Fallback.svg";
+import { useInViewport } from "react-in-viewport";
 import "../styles/InfoCard.css";
 
 function InfoCard({
@@ -19,40 +20,48 @@ function InfoCard({
   cardDescription,
   cardLink,
 }) {
+  const ref = useRef(null);
+  const { enterCount } = useInViewport(
+    ref,
+    { rootMargin: "-300px" },
+    { disconnectOnLeave: false },
+    {}
+  );
   return (
     <div id="InfoCard">
-      <Tooltip label={cardDescription} rounded="lg">
-        <LinkBox
-          maxW="sm"
-          my={10}
-          rounded="lg"
-          shadow="xl"
-          _hover={{
-            shadow: "2xl",
-            transform: "scale(0.99)",
-            bgColor: "gray.50",
-          }}
-          _active={{
-            transform: "scale(1.01)",
-            bgColor: "white",
-          }}>
-          <HStack>
-            <Image
-              src={imageSrc}
-              maxW={{ base: "100%", sm: "200px" }}
-              fallbackSrc={FallbackImage}
-              alt={imageAlt}
-              borderRadius="lg"
-            />
-            <VStack p={5}>
-              <Heading size="md" my="2">
-                <LinkOverlay href={cardLink}>{cardTitle}</LinkOverlay>
-              </Heading>
-              <Text>{cardDescription}</Text>
-            </VStack>
-          </HStack>
-        </LinkBox>
-      </Tooltip>
+      <ScaleFade
+        initialScale={0.9}
+        in={enterCount > 0}
+        whileHover={{ scale: 1.01 }}>
+        <Tooltip label={cardDescription} rounded="lg">
+          <LinkBox
+            maxW="sm"
+            my={10}
+            rounded="lg"
+            shadow="xl"
+            ref={ref}
+            _active={{
+              transform: "scale(1.01)",
+              bgColor: "gray.50",
+            }}>
+            <HStack>
+              <Image
+                src={imageSrc}
+                maxW={{ base: "100%", sm: "200px" }}
+                fallbackSrc="/images/Fallback.svg"
+                alt={imageAlt}
+                borderRadius="lg"
+              />
+              <VStack p={5}>
+                <Heading size="md" my="2">
+                  <LinkOverlay href={cardLink}>{cardTitle}</LinkOverlay>
+                </Heading>
+                <Text>{cardDescription}</Text>
+              </VStack>
+            </HStack>
+          </LinkBox>
+        </Tooltip>
+      </ScaleFade>
     </div>
   );
 }
