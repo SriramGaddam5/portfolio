@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Portfolio</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        background-color: #000;
+        color: #fff;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem;
+      }
+
+      .header {
+        background-color: #000;
+        padding: 1rem;
+        border-radius: 8px;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+      }
+
+      .nav {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: background-color 0.2s;
+      }
+
+      .nav a:hover {
+        background-color: #333;
+      }
+
+      .main-content {
+        min-height: 60vh;
+      }
+
+      .section {
+        margin-bottom: 2rem;
+      }
+
+      .section h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #fff;
+      }
+
+      .section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        color: #fff;
+      }
+
+      .section p {
+        font-size: 1.1rem;
+        color: #ccc;
+        margin-bottom: 1rem;
+      }
+
+      .experience-card {
+        background-color: #1a202c;
+        border: 1px solid #2d3748;
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .experience-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+      }
+
+      .experience-info {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .company-logo {
+        width: 60px;
+        height: 60px;
+        background-color: #fff;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .company-logo img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+      }
+
+      .position-info h3 {
+        font-size: 1.2rem;
+        color: #fff;
+        margin-bottom: 0.25rem;
+      }
+
+      .company-name {
+        font-size: 1.1rem;
+        color: #63b3ed;
+        font-weight: 600;
+      }
+
+      .duration {
+        background-color: #38a169;
+        color: white;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        font-size: 0.875rem;
+      }
+
+      .description {
+        color: #ccc;
+        margin-bottom: 1rem;
+      }
+
+      .technologies {
+        margin-bottom: 1rem;
+      }
+
+      .technologies h4 {
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 0.5rem;
+      }
+
+      .tech-badges {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+      }
+
+      .tech-badge {
+        background-color: transparent;
+        border: 1px solid #3182ce;
+        color: #3182ce;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        font-size: 0.875rem;
+      }
+
+      .btn {
+        display: inline-block;
+        background-color: #3182ce;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.2s;
+      }
+
+      .btn:hover {
+        background-color: #2c5aa0;
+      }
+
+      .footer {
+        background-color: #000;
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 2rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        color: #666;
+      }
+
+      .footer hr {
+        border: none;
+        border-top: 1px solid #333;
+        margin-bottom: 0.5rem;
+      }
+
+      @media (max-width: 768px) {
+        .experience-header {
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        .nav {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="work.html">Work</a>
+        </nav>
+      </header>
+
+      <main class="main-content">
+        <div class="section">
+          <h1>About Me</h1>
+          <p>
+            I like creating video games with Godot, Unity, and Unreal Engine.
+            Programming and design often go hand in hand when developing video
+            games. I believe that the best way to learn is to build something.
+          </p>
+          <p>
+            I'm current a student at Texas A&M University, studying
+            Visualization with experience with both software and game
+            development. On the software side, I've used Arduino, AWS, C#, C++,
+            CSS, HTML, Git, Figma, LLM, Java, Kotlin, JavaScript (React,
+            TypeScript), Linux, Python, and PyTorch. On the design side, I've
+            used After Effects, Houdini, Illustrator, Figma, Maya, Renderman,
+            Substance, Photoshop, Unreal, and Unity.
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>Work Experience</h2>
+
+          <div class="experience-card">
+            <div class="experience-header">
+              <div class="experience-info">
+                <div class="company-logo">
+                  <img src="public/images/nike-logo.svg" alt="Nike logo" />
+                </div>
+                <div class="position-info">
+                  <h3>Software Engineering Intern</h3>
+                  <div class="company-name">Nike</div>
+                </div>
+              </div>
+              <span class="duration">2025</span>
+            </div>
+            <p class="description">Optimized Nike mobile app for Android</p>
+            <div class="technologies">
+              <h4>Technologies:</h4>
+              <div class="tech-badges">
+                <span class="tech-badge">Kotlin</span>
+                <span class="tech-badge">Ruby</span>
+                <span class="tech-badge">Android Studio</span>
+                <span class="tech-badge">JFrog Artifactory</span>
+                <span class="tech-badge">SauceLabs TestFairy</span>
+                <span class="tech-badge">Jenkins</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="experience-card">
+            <div class="experience-header">
+              <div class="experience-info">
+                <div class="company-logo">
+                  <img src="public/images/sennu-logo.svg" alt="Sennu AI logo" />
+                </div>
+                <div class="position-info">
+                  <h3>Winter Software Engineering Intern</h3>
+                  <div class="company-name">Sennu AI (YC W25)</div>
+                </div>
+              </div>
+              <span class="duration">2024</span>
+            </div>
+            <p class="description">
+              Built responsive user interfaces and implemented new features
+            </p>
+            <div class="technologies">
+              <h4>Technologies:</h4>
+              <div class="tech-badges">
+                <span class="tech-badge">React</span>
+                <span class="tech-badge">JavaScript</span>
+                <span class="tech-badge">TypeScript</span>
+                <span class="tech-badge">Figma</span>
+                <span class="tech-badge">CSS</span>
+                <span class="tech-badge">HTML</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="experience-card">
+            <div class="experience-header">
+              <div class="experience-info">
+                <div class="company-logo">
+                  <img src="public/images/amazon-logo.svg" alt="Amazon logo" />
+                </div>
+                <div class="position-info">
+                  <h3>Design Technologist Intern</h3>
+                  <div class="company-name">Amazon</div>
+                </div>
+              </div>
+              <span class="duration">2024</span>
+            </div>
+            <p class="description">
+              Created Figma plugin to export designs to TCL RayNeo X2
+            </p>
+            <div class="technologies">
+              <h4>Technologies:</h4>
+              <div class="tech-badges">
+                <span class="tech-badge">JavaScript</span>
+                <span class="tech-badge">HTML</span>
+                <span class="tech-badge">CSS</span>
+                <span class="tech-badge">TypeScript</span>
+                <span class="tech-badge">C++</span>
+                <span class="tech-badge">Figma API</span>
+                <span class="tech-badge">AWS S3</span>
+                <span class="tech-badge">AWS Lambda</span>
+                <span class="tech-badge">AWS CloudWatch</span>
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Kotlin</span>
+                <span class="tech-badge">Android Studio</span>
+                <span class="tech-badge">Arduino</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="index.html" class="btn">Back to Home</a>
+      </main>
+
+      <footer class="footer">
+        <hr />
+        <p>I'm here to stay (Footer)</p>
+      </footer>
+    </div>
+  </body>
+</html>

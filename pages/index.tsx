@@ -13,8 +13,8 @@ const IndexPage = () => (
       <Text>
         I like to create video games and I have experience with Python, Java,
         JavaScript (React, Typescript), HTML/CSS, C#, etc. Aside from coding, I
-        like to draw, paint, and play my electric guitar. I really like the
-        combination of art and programming.
+        enjoy drawing, painting, and playing my electric guitar. Overall, I
+        really like the combination of art and programming.
       </Text>
       <Button colorScheme="blue">
         <Link href="/about">About</Link>
