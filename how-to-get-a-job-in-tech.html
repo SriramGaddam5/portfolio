@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to Get a Job in Tech | Blog</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        background-color: #000;
+        color: #fff;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 1rem;
+      }
+
+      .header {
+        background-color: #000;
+        padding: 1rem;
+        border-radius: 8px;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+      }
+
+      .nav {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: background-color 0.2s;
+      }
+
+      .nav a:hover {
+        background-color: #333;
+      }
+
+      .main-content {
+        min-height: 60vh;
+      }
+
+      .article-header {
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #333;
+      }
+
+      .article-title {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+        color: #fff;
+        line-height: 1.2;
+      }
+
+      .article-meta {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        color: #888;
+        font-size: 0.9rem;
+      }
+
+      .article-tags {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+      }
+
+      .tag {
+        background-color: #3182ce;
+        color: white;
+        padding: 0.25rem 0.75rem;
+        border-radius: 5px;
+        font-size: 0.8rem;
+      }
+
+      .article-content {
+        font-size: 1.1rem;
+        color: #ccc;
+        line-height: 1.8;
+      }
+
+      .article-content h2 {
+        font-size: 1.8rem;
+        margin: 2rem 0 1rem 0;
+        color: #fff;
+      }
+
+      .article-content h3 {
+        font-size: 1.4rem;
+        margin: 1.5rem 0 0.75rem 0;
+        color: #fff;
+      }
+
+      .article-content h4 {
+        font-size: 1.2rem;
+        margin: 2rem 0 1rem 0;
+        color: #fff;
+        font-weight: 600;
+        line-height: 1.4;
+      }
+
+      .article-content p {
+        margin-bottom: 1.5rem;
+      }
+
+      .article-content br {
+        display: block;
+        content: "";
+        margin-top: 1.5rem;
+      }
+
+      .article-content ul,
+      .article-content ol {
+        margin-bottom: 1.5rem;
+        padding-left: 2rem;
+      }
+
+      .article-content li {
+        margin-bottom: 0.5rem;
+      }
+
+      .article-content blockquote {
+        border-left: 4px solid #3182ce;
+        padding-left: 1rem;
+        margin: 1.5rem 0;
+        font-style: italic;
+        color: #aaa;
+      }
+
+      .article-content code {
+        background-color: #1a202c;
+        padding: 0.2rem 0.4rem;
+        border-radius: 3px;
+        font-family: "Courier New", monospace;
+        font-size: 0.9rem;
+      }
+
+      .article-content pre {
+        background-color: #1a202c;
+        padding: 1rem;
+        border-radius: 8px;
+        overflow-x: auto;
+        margin: 1.5rem 0;
+      }
+
+      .article-content pre code {
+        background-color: transparent;
+        padding: 0;
+      }
+
+      .article-content a {
+        color: #63b3ed;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        border-bottom: 1px solid transparent;
+      }
+
+      .article-content a:hover {
+        color: #3182ce;
+        border-bottom: 1px solid #3182ce;
+      }
+
+      .back-to-blog {
+        display: inline-block;
+        margin-top: 2rem;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.2s;
+        font-size: 0.875rem;
+        background-color: transparent;
+        border: 1px solid #3182ce;
+        color: #3182ce;
+      }
+
+      .back-to-blog:hover {
+        background-color: #3182ce;
+        color: white;
+      }
+
+      .footer {
+        background-color: #000;
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 2rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        color: #666;
+      }
+
+      .footer hr {
+        border: none;
+        border-top: 1px solid #333;
+        margin-bottom: 0.5rem;
+      }
+
+      .scroll-progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: #2d3748;
+        z-index: 1000;
+      }
+
+      .scroll-progress-bar {
+        height: 100%;
+        background: linear-gradient(90deg, #3182ce, #63b3ed);
+        width: 0%;
+        transition: width 0.1s ease;
+      }
+
+      .scroll-progress-text {
+        position: fixed;
+        top: 10px;
+        right: 20px;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        z-index: 1001;
+        border: 1px solid #3182ce;
+      }
+
+      @media (max-width: 768px) {
+        .article-title {
+          font-size: 2rem;
+        }
+
+        .nav {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .container {
+          padding: 0.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="scroll-progress">
+      <div class="scroll-progress-bar"></div>
+    </div>
+    <div class="scroll-progress-text">0%</div>
+    <div class="container">
+      <header class="header">
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="work.html">Work</a>
+          <a href="blog.html">Blog</a>
+        </nav>
+      </header>
+
+      <main class="main-content">
+        <article>
+          <header class="article-header">
+            <img src="https://pyxis.nymag.com/v1/imgs/37e/828/1e2a2943b3871f23576937330a0fbdd9f6-squidward.rsquare.w400.jpg" alt="Squidward looking out his window with Spongebob and Patrick having fun outside" height="400" style="display: block; margin: 0 auto; margin-bottom: 0.5rem; margin-top: 1rem; border-radius: 8px;" />
+            <p style="text-align: center; color: #888; font-size: 0.9rem; font-style: italic; margin-bottom: 3rem;">Squidward isn't but you can be happy like Spongebob and Patrick</p>
+            
+            <h1 class="article-title">How to Get a Job in Tech</h1>
+            <div class="article-meta">
+              <span>August 1, 2024</span>
+              <span>•</span>
+              <span>5-10 min read</span>
+            </div>
+            <div class="article-tags">
+              <span class="tag">Job</span>
+              <span class="tag">Internship</span>
+              <span class="tag">Advice</span>
+            </div>
+          </header>
+
+          <div class="article-content">
+            <h2>Applying</h2>
+            Apply to at least 500 positions. It seems like a lot, but it isn't. It's a numbers game. You can apply to 1000-2000 and still only get a few offers, roughly 0.1% chance of getting an offer. Apply early, apply now.
+            <br>
+            There are different times to apply for internships in the summer or fall/spring.
+            <br>
+            There are a few hurdles to pass to get a job:
+            <ol>
+            <li>Resume screening</li>
+            <li>Online assessment</li>
+            <li>Interviews</li>
+            <li>Behavioral interview</li>
+            <li>Technical interview</li>
+            </ol>
+            <h3>Resume</h3>
+            First you need to pass a resume screening. But how? You need a good resume. Don't be afraid to exaggerate. List high school stuff if you don't have anything. Use latexresu.me to create a template if you don't have a resume yet or use it as a guideline.
+            <h3>Confusing role titles - is it tech?</h3>
+            Apply to any position even if it doesn't seem like a software or tech role, the title of the role can be misleading. Better to apply then to miss out on a potential offer. These types of positions can also be skipped by other applicants since they don't look like tech roles, increasing your chances of getting in since a lower number of applicants would apply to that role.
+            <h3>How to apply fast</h3>
+            <h4>Simplify.jobs</h4>
+            Download the Simplify.jobs chrome extension here: <a href="https://simplify.jobs/install" target="_blank" rel="noopener noreferrer">simplify.jobs/install</a>. This uses AI to automate your application process. Helpful to autofill your resume and other info you don't want to type again and again. They also have job lists: <a href="https://github.com/SimplifyJobs/Summer2025-Internships" target="_blank" rel="noopener noreferrer">github.com/SimplifyJobs/Summer2025-Internships</a>
+            <h4>Otta (Welcome to the Jungle)</h4>
+            Another popular job website with a great onboarding process. You can find them here: <a href="https://app.otta.com" target="_blank" rel="noopener noreferrer">app.otta.com</a>
+            <h4>Keyboard Shortcuts</h4>
+            A lot of the navigation of the job application can be automated without using your mouse. Checkboxes can be checked with the spacebar or enter, use tab to navigate to the next element, shift + tab to go to the previous element, type the first letter to automatically select the first occurrence of that item in a dropdown list, etc. Turn on clipboard history with Win + V and paste things that Simplify.jobs can't automate.
+            <br>
+            For example, when applying to all tech roles in a company using Workday for their application memorize where you need to click, spam click in places where the button didn't load yet so the instant it loads you already clicked on it, memorize the work authorization dropdowns for US citizenship and other parts of the application which are the same or similar for all job listings, wait for the date to load then go to the next page, etc.
+            <h2>Online Assessments</h2>
+            Some of these online assessments aren't proctored so use all the resources you have available. Use a second computer/monitor, a friend, share your screen, etc. But don't make it obvious.
+            <h2>Technical Interview</h2>
+            Solving LeetCode problems is a common way to learn DSA (Data Structures and Algorithms). If you don't know how to code, learn Python. Python is the most beginner friendly programming language and once you learn the basics of one programming it's much easier to learn other programming languages. Don't worry too much about choosing which programming language to learn when beginning.
+            <br>
+            These interviews are usually 45 minutes and you may be asked 1-2 technical questions with about 15 minutes per question. Explain your thought process and how you approach the problem. Make sure to add comments to your code. The interviewer may ask you to do the problem in a different way or add a new restriction to the problem changing the way you would solve it. The point of the interview isn't just your raw technical skill and your ability to solve the problem but more about how you approach the problem and problem solve in general.
+            <br>
+            Solving these vague abstract problems may seem like a waste of time. They may seem not important since most likely you won't use DSA concepts on the job but more like make a button bigger or change the color of a background. But the point of learning DSA is showing that you can put the time and effort into learning something useless (can be useful in certain cases though).
+            <br>
+            <ul>
+              <li>Practice LeetCode problems here: <a href="https://leetcode.com/problemset" target="_blank" rel="noopener noreferrer">leetcode.com/problemset</a>. If you don't want to pay for premium use <a href="https://lintcode.com" target="_blank" rel="noopener noreferrer">lintcode.com</a> to solve premium problems</li>
+              
+              <li>NeetCode has a youtube channel and website where he explains his approach and solutions to many LeetCode problems. Solving LeetCode problems can be intimidating, start here if you don't know where to begin.</li>
+              <ul>
+                <li>His youtube channel: <a href="https://youtube.com/@NeetCode" target="_blank" rel="noopener noreferrer">youtube.com/@NeetCode</a></li>
+                <li>Website: <a href="https://neetcode.io" target="_blank" rel="noopener noreferrer">neetcode.io</a></li>
+              </ul>
+            
+            
+            <li>Abdul Bari has great explanations about DSA</li>
+            
+            <ul><li><a href="https://youtube.com/@abdul_bari" target="_blank" rel="noopener noreferrer">youtube.com/@abdul_bari</a></li></ul>
+            
+            <li>If you want to learn Web development, <a href="https://theodinproject.com" target="_blank" rel="noopener noreferrer">theodinproject.com</a> is a great place to begin</li>
+            
+            <li>If you want to learn Python, reading Al Sweigart's <a href="https://automatetheboringstuff.com" target="_blank" rel="noopener noreferrer">automatetheboringstuff.com</a> is a practical way to apply your newfound programming skills.</li>
+            
+            <li>The Blind 75 is a popular list of 75 common LeetCode questions that teach you the basics of different types of programming questions. <a href="https://teamblind.com/post/New-Year-Gift---Curated-List-of-Top-75-LeetCode-Questions-to-Save-Your-Time-OaM1orEU" target="_blank" rel="noopener noreferrer">teamblind.com/post/New-Year-Gift---Curated-List-of-Top-75-LeetCode-Questions-to-Save-Your-Time-OaM1orEU</a></li>
+            
+            <li>Helpful ordered question list to start learning by topic <a href="https://seanprashad.com/leetcode-patterns" target="_blank" rel="noopener noreferrer">seanprashad.com/leetcode-patterns</a></li>
+            </ul>
+            <h2>Behavioral Interview</h2>
+            You are asked the same questions again and again in interviews. If you write down responses for all these questions, you'll have a good answer bank to practice for non-technical interviews. Remember to be confident and to seem really interested in the company. Do some research before the interview to learn more about the company. Really try to make a connection with your interviewer. Don't talk too fast and don't be afraid to ask for time to think about responses.
+            <br>
+            You have to get a bit lucky to get a good interviewer, but you can't change that. The only thing that you can change is yourself, so by preparing well you reduce the amount of luck you need to pass.
+            <h3>Questions the interviewer may ask</h3>
+            <ul>
+            <li>Tell me about yourself</li>
+            <li>Make sure to have some sort of story here. You can start with the format of “Hi, my name is Johnny Appleseed, a junior Computer Science major at Apple Tree University.” List some technologies you know and your previous related experience.</li>
+            
+            <li>What is your greatest strength?</li>
+            
+            <li>What is your greatest weakness?</li>
+            
+            <li>What are your strengths and weaknesses?</li>
+            
+            <li>Why are you interested in this position?</li>
+            
+            <li>What do you know about our company?</li>
+            
+            <li>Name a challenge you faced and how you overcame it.</li>
+            
+            <li>How did you solve a dispute when working in a team?</li>
+            
+            <li>Describe a situation where you had to convince other people to adopt your ideas. What would be your approach?</li>
+            
+            <li>Can you explain how you overcame a difficult challenge and your process to overcome it?</li>
+            
+            <li>Describe how you learned from a mistake you made.</li>
+            
+            <li>What are your salary expectations?</li>
+            <ul>
+            <li>Do you have any questions for me?</li>
+          </ul>
+            </ul>
+            <h3>Questions to ask the interviewer</h3>
+            
+            Make sure to appear interested by asking questions that you talked about during your interview and follow up on them.
+            Why did you want to become your current position?
+            <ul>
+            <li>Why choose this company?</li>
+            
+            <li>What is the most difficult challenge you face in your job?</li>
+            
+            <li>What does a typical intern/employee do?</li>
+            
+            <li>What technologies/frameworks do you use?</li>
+            
+            <li>How is the team structured?</li>
+            
+            <li>What are the entry-level positions or internships you recruit most frequently?</li>
+            
+            <li>What made you join this company?</li>
+            
+            <li>What experiences do you like to see in a candidate from their time in college?</li>
+          </ul>
+            <h2>Emails</h2>
+            <h3>Remember English class?</h3>
+            Make sure you know how to properly format emails professionally. If you don't know what to say, ask ChatGPT for advice. But don't copy paste directly from ChatGPT, use it as an example. Send follow up emails after interviews thanking your interviewers. This might help interviewers help remember you and sustain that connection.
+            <br>
+            Make sure to use your school email or a professional looking email. Don't use Xxc00ki3M0n5t3RxX@totallyrealemail.com or have a profile picture like this. <img src="https://pbs.twimg.com/media/DX8QSGWU0AEWHRc.jpg" alt="Patrick Star" width="30" height="auto" />
+            Check your email often and enable notifications on your phone. Create a custom label for applying to jobs to track your applications and to not clutter your personal inbox.
+            <h3></h3>Reading</h3>
+            You are going to get a lot of rejection emails, it's a part of life. Don't be disappointed, just drag them into your jobs email label and mark them as read. But how do you know if it's a rejection email? They usually contain phrases such as <i>unfortunately</i>, <i>thank you for your interest</i>, <i>we appreciate</i>, etc. But be careful, don't miss an invitation to an interview.
+            <h2>Attire</h2>
+            Make sure to dress professionally for interviews, at least a dress shirt. Make sure to seem presentable letting your interviewer know that you care about the interview.
+            <h2>Summary</h2>
+            Apply to a lot of internships and lock in.
+            <br>
+            <img src="https://c.tenor.com/Tc5HlwKjZSIAAAAd/tenor.gif" alt="Alphabet soup spelling out \"Get a job\"" height="400" style="display: block; margin: 0 auto; margin-top: 2rem; margin-bottom: 2rem; border-radius: 8px;">
+          </div>
+          <a href="blog.html" class="back-to-blog">← Back to Blog</a>
+        </article>
+      </main>
+
+      <footer class="footer">
+        <hr />
+        <p>
+          ©
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          Sriram Gaddam
+        </p>
+      </footer>
+    </div>
+
+    <script>
+      // Scroll progress functionality
+      const scrollProgressBar = document.querySelector('.scroll-progress-bar');
+      const scrollProgressText = document.querySelector('.scroll-progress-text');
+
+      function updateScrollProgress() {
+        const scrollTop = window.pageYOffset;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+        
+        // Update progress bar
+        scrollProgressBar.style.width = scrollPercent + '%';
+        
+        // Update text
+        scrollProgressText.textContent = Math.round(scrollPercent) + '%';
+      }
+
+      // Update on scroll
+      window.addEventListener('scroll', updateScrollProgress);
+      
+      // Initial update
+      updateScrollProgress();
+    </script>
+  </body>
+</html>
