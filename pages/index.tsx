@@ -5,7 +5,9 @@ import Layout from "../components/Layout";
 const IndexPage = () => (
   <Layout title="Portfolio | Home">
     <VStack gap={4} alignItems="start">
-      <Heading>Hi, I'm Sriram Gaddam!</Heading>
+      <Heading>
+        Hi, I'm Sriram Gaddam! I'm a game developer/technical artist.
+      </Heading>
       <Image
         src="https://user-images.githubusercontent.com/56180112/233874095-04b229a6-7391-4a45-a4ac-8c31b983d995.gif"
         alt="Profile"
