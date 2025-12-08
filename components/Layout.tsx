@@ -28,9 +28,9 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
           <HStack justifyContent="space-between">
             <Link href="/">Home</Link>
             <HStack as="nav" gap={4} justifyContent="center">
-              <Link href="/work">Work</Link>
-              <Text>|</Text>
               <Link href="/about">About</Link>
+              <Text>|</Text>
+              <Link href="/blog">Blog</Link>
               <Text>|</Text>
               <Link
                 href="https://sriramgaddam5.myportfolio.com/contact"
@@ -49,7 +49,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
       </VStack>
     </Container>
 
-    <Box as="footer" bg="black" p={4} borderRadius="md" shadow="sm" mt="auto">
+    <Box as="footer" bg="black" p={4} borderRadius="md" shadow="sm" mt={16}>
       <Container maxW="container.xl">
         <Box borderBottom="1px" borderColor="gray.200" mb={2} />
         <Text textAlign="center" color="gray.600">

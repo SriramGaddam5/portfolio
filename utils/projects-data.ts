@@ -1,5 +1,6 @@
 export interface Project {
   id: string;
+  slug: string;
   title: string;
   description: string;
   technologies: string[];
@@ -12,10 +13,11 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "project-1",
+    slug: "spark",
     title: "Spark",
     description:
       "A fast paced puzzle platformer based on Metriod with an emphasis on speed and movement.",
-    technologies: ["Unity", "C#", "Blender", "Maya", "Substance Painter"],
+    technologies: ["Unity", "C#", "Photoshop"],
     colorScheme: "blue",
     link: "https://official-itchio.itch.io/spark",
     coverImage:
@@ -23,6 +25,7 @@ export const projects: Project[] = [
   },
   {
     id: "project-2",
+    slug: "hi-core",
     title: "Hi:Core",
     description:
       "Retro arcade twin stick shooter and overall winner of 2024 Fall TAGD game jam!",
@@ -34,6 +37,7 @@ export const projects: Project[] = [
   },
   {
     id: "project-3",
+    slug: "silent-vote",
     title: "Silent Vote",
     description:
       "Privacy-focused decentralized voting application using 4 proofs: voter eligibility, results, progress, and verification",
@@ -46,6 +50,7 @@ export const projects: Project[] = [
   },
   {
     id: "project-4",
+    slug: "slime-swing",
     title: "Slime Swing",
     description:
       "Chill pixel art 2D platformer and submission to 2024 Chillenium Game Jam",
@@ -54,5 +59,29 @@ export const projects: Project[] = [
     link: "https://official-itchio.itch.io/slime-swing",
     coverImage:
       "https://img.itch.zone/aW1nLzE1MjU4MTAyLnBuZw==/original/QH5Gxq.png",
+  },
+  {
+    id: "project-5",
+    slug: "what-lies-west",
+    title: "What Lies West",
+    description:
+      "Precision platformer and submission to TAGD Fall 2025 Game Jam",
+    technologies: ["Godot", "C#", "Aseprite"],
+    colorScheme: "orange",
+    link: "https://pineapple120.itch.io/what-lies-west",
+    coverImage:
+      "https://img.itch.zone/aW1nLzI0NDI4ODA0LnBuZw==/original/HP%2FWQP.png",
+  },
+  {
+    id: "project-6",
+    slug: "dipsomania",
+    title: "DIPSOMANIA",
+    description:
+      "A 3D bar simulator where you serve customers drinks and clean your bar while fighting off competitors before your bar shuts down",
+    technologies: ["Unity", "C#", "Photoshop"],
+    colorScheme: "red",
+    link: "https://official-itchio.itch.io/dipsomania",
+    coverImage:
+      "https://img.itch.zone/aW1nLzI0MTM2NDU5LnBuZw==/original/f8ZcmK.png",
   },
 ];

@@ -1,0 +1,45 @@
+name: Build and Deploy Next.js
+
+on:
+  push:
+    branches: ["main"] # Change to "master" if that's your default branch
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build with Next.js
+        run: npm run build
+
+      - name: Copy build files to root
+        run: |
+          # Copy all files from out/ to root
+          cp -r out/* .
+          # Remove the out directory
+          rm -rf out
+
+      - name: Commit and push built files
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add -A
+          git commit -m "🚀 Deploy Next.js build [skip ci]" || echo "No changes to commit"
+          git push

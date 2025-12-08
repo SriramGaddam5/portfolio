@@ -15,7 +15,8 @@
 
 # next.js
 /.next/
-/out/
+# Note: /out/ is not ignored because we copy built files to root for Domain Hosting
+# Built files in root are committed for Domain Hosting to serve
 
 # production
 /build

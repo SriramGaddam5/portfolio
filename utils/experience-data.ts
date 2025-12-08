@@ -5,7 +5,6 @@ export interface WorkExperience {
   duration: string;
   description: string;
   technologies: string[];
-  achievements: string[];
   logo: string;
 }
 
@@ -24,11 +23,6 @@ export const workExperience: WorkExperience[] = [
       "SauceLabs TestFairy",
       "Jenkins",
     ],
-    achievements: [
-      "Led development of 3 major features",
-      "Improved application performance by 40%",
-      "Mentored 2 junior developers",
-    ],
     logo: "/images/nike-logo.svg",
   },
   {
@@ -39,11 +33,6 @@ export const workExperience: WorkExperience[] = [
     description:
       "Built responsive user interfaces and implemented new features",
     technologies: ["React", "JavaScript", "TypeScript", "Figma", "CSS", "HTML"],
-    achievements: [
-      "Built 5+ responsive web pages",
-      "Implemented user authentication system",
-      "Reduced bundle size by 25%",
-    ],
     logo: "/images/sennu-logo.svg",
   },
   {
@@ -66,11 +55,6 @@ export const workExperience: WorkExperience[] = [
       "Kotlin",
       "Android Studio",
       "Arduino",
-    ],
-    achievements: [
-      "Completed 10+ client projects",
-      "Maintained 100% client satisfaction",
-      "Developed custom WordPress themes",
     ],
     logo: "/images/amazon-logo.svg",
   },
