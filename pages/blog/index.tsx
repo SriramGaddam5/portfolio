@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   Box,
   Heading,
@@ -28,8 +29,7 @@ const BlogPage = () => (
           <LinkBox
             key={post.id}
             as={Box}
-            bg="gray.800"
-            border="1px"
+            borderWidth="1px"
             borderColor="gray.700"
             borderRadius="md"
             p={6}
@@ -40,32 +40,50 @@ const BlogPage = () => (
               transform: "translateY(-2px)",
             }}
           >
-            <HStack justifyContent="space-between" mb={3}>
-              <LinkOverlay as={Link} href={`/blog/${post.slug}`}>
-                <Heading size="lg" color="white">
-                  {post.title}
-                </Heading>
-              </LinkOverlay>
-              <Badge colorScheme="blue" fontSize="sm">
-                {post.date}
-              </Badge>
+            <HStack gap={6} alignItems="start">
+              <Box
+                flexShrink={0}
+                width="200px"
+                height="150px"
+                position="relative"
+                borderRadius="md"
+                overflow="hidden"
+              >
+                <Image
+                  src={post.image}
+                  alt={post.alt}
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
+              </Box>
+
+              <VStack alignItems="start" flex={1} gap={3}>
+                <HStack justifyContent="space-between" w="full">
+                  <LinkOverlay as={Link} href={`/blog/${post.slug}`}>
+                    <Heading size="lg" color="white">
+                      {post.title}
+                    </Heading>
+                  </LinkOverlay>
+                  <Badge colorScheme="blue" fontSize="sm" flexShrink={0}>
+                    {post.date}
+                  </Badge>
+                </HStack>
+
+                <Text color="gray.300">{post.excerpt}</Text>
+
+                <HStack gap={2} flexWrap="wrap">
+                  {post.tags.map((tag, index) => (
+                    <Badge key={index} colorPalette="blue" variant="outline">
+                      {tag}
+                    </Badge>
+                  ))}
+                </HStack>
+
+                <Text mt={5} color="blue.400" fontSize="sm" fontWeight="medium">
+                  Read More
+                </Text>
+              </VStack>
             </HStack>
-
-            <Text color="gray.300" mb={4}>
-              {post.excerpt}
-            </Text>
-
-            <HStack gap={2} mb={4} flexWrap="wrap">
-              {post.tags.map((tag, index) => (
-                <Badge key={index} colorScheme="purple" variant="outline">
-                  {tag}
-                </Badge>
-              ))}
-            </HStack>
-
-            <Text color="blue.400" fontSize="sm" fontWeight="medium">
-              Read More →
-            </Text>
           </LinkBox>
         ))}
       </VStack>

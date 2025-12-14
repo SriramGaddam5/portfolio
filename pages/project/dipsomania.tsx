@@ -60,7 +60,7 @@ const DipsomaniaPage = () => {
 
         {/* Overview Section */}
         <Box w="full">
-          <Heading size="xl" mb={6}>
+          <Heading size="xl" my={6}>
             Game Overview
           </Heading>
 
@@ -100,7 +100,7 @@ const DipsomaniaPage = () => {
             </Box>
           </SimpleGrid>
 
-          <Text fontSize="lg" color="gray.300" lineHeight="tall" mt={6} mb={4}>
+          <Text fontSize="lg" color="gray.300" lineHeight="tall" mt={12} mb={8}>
             You are Jack, a bartender down on his luck and out of money. Your
             banker threatens to shut down your bar, and you have 3 days to clean
             your act up. Better yet, your rival Henry seems to be getting in
