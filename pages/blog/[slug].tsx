@@ -219,4 +219,24 @@ const BlogPostPage = () => {
   );
 };
 
+// Required for static export
+export async function getStaticPaths() {
+  const paths = Object.keys(blogPostsData).map((slug) => ({
+    params: { slug },
+  }));
+
+  return {
+    paths,
+    fallback: false, // Show 404 for non-existent posts
+  };
+}
+
+export async function getStaticProps({ params }: { params: { slug: string } }) {
+  return {
+    props: {
+      slug: params.slug,
+    },
+  };
+}
+
 export default BlogPostPage;

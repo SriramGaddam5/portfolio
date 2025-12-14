@@ -117,4 +117,27 @@ const ProjectPage = () => {
   );
 };
 
+// Required for static export
+export async function getStaticPaths() {
+  // Filter out dipsomania since it has its own dedicated page
+  const paths = projects
+    .filter((project) => project.slug !== "dipsomania")
+    .map((project) => ({
+      params: { slug: project.slug },
+    }));
+
+  return {
+    paths,
+    fallback: false, // Show 404 for non-existent projects
+  };
+}
+
+export async function getStaticProps({ params }: { params: { slug: string } }) {
+  return {
+    props: {
+      slug: params.slug,
+    },
+  };
+}
+
 export default ProjectPage;
