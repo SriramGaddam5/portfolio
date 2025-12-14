@@ -1,6 +1,0 @@
-<svg width="400" height="200" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="400" height="200" fill="#1a202c"/>
-  <rect x="50" y="50" width="300" height="100" fill="#2d3748" rx="8"/>
-  <text x="200" y="110" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="24" font-weight="bold">PROJECT 3</text>
-  <text x="200" y="130" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="12">Next.js App</text>
-</svg> 
