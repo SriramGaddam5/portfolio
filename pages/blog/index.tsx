@@ -40,11 +40,15 @@ const BlogPage = () => (
               transform: "translateY(-2px)",
             }}
           >
-            <HStack gap={6} alignItems="start">
+            <VStack
+              gap={6}
+              alignItems="start"
+              flexDirection={{ base: "column", md: "row" }}
+            >
               <Box
                 flexShrink={0}
-                width="200px"
-                height="150px"
+                width={{ base: "100%", md: "200px" }}
+                height={{ base: "200px", md: "150px" }}
                 position="relative"
                 borderRadius="md"
                 overflow="hidden"
@@ -57,17 +61,28 @@ const BlogPage = () => (
                 />
               </Box>
 
-              <VStack alignItems="start" flex={1} gap={3}>
-                <HStack justifyContent="space-between" w="full">
+              <VStack alignItems="start" flex={1} gap={3} w="full">
+                <VStack
+                  alignItems="start"
+                  w="full"
+                  gap={2}
+                  flexDirection={{ base: "column", sm: "row" }}
+                  justifyContent={{ base: "start", sm: "space-between" }}
+                >
                   <LinkOverlay as={Link} href={`/blog/${post.slug}`}>
                     <Heading size="lg" color="white">
                       {post.title}
                     </Heading>
                   </LinkOverlay>
-                  <Badge colorScheme="blue" fontSize="sm" flexShrink={0}>
+                  <Badge
+                    colorScheme="blue"
+                    fontSize="sm"
+                    flexShrink={0}
+                    alignSelf={{ base: "start", sm: "center" }}
+                  >
                     {post.date}
                   </Badge>
-                </HStack>
+                </VStack>
 
                 <Text color="gray.300">{post.excerpt}</Text>
 
@@ -83,7 +98,7 @@ const BlogPage = () => (
                   Read More
                 </Text>
               </VStack>
-            </HStack>
+            </VStack>
           </LinkBox>
         ))}
       </VStack>

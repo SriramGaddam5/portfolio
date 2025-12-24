@@ -27,14 +27,14 @@ const AboutPage = () => (
         </Text>
         <Text fontSize="lg" color="gray.300">
           I'm current a student at Texas A&M University, studying Visualization
-          with experience with both software and game development. On the
-          software side, I've used Arduino, Agile, AWS, C#, C++, CSS, Docker,
-          HTML, Git, HLSL, Firebase, LLM, Java, Kotlin, JavaScript (Node.js,
-          React, TypeScript), Jenkins, Jira, Linux, MongoDB, MySQL, PostgreSQL,
-          Python, PyTorch, REST API, Ruby, and Swift. On the more creative side,
-          I've used After Effects, Blueprints, Godot, Houdini, Illustrator,
-          InDesign, Figma, Maya, Renderman, Substance, Photoshop, Unreal, Unity,
-          and ZBrush.
+          with experience with both software, frontend, and game development. On
+          the software side, I've used Arduino, Agile, AWS, C#, C++, CSS,
+          Docker, Firebase, Git, HLSL, HTML, Java, Kotlin, JavaScript (Node.js,
+          React, TypeScript), Jenkins, Jira, Linux, LLMs, MongoDB, MySQL,
+          Plastic SCM, Perforce, PostgreSQL, Python, PyTorch, REST API, Ruby,
+          and Swift. On the more creative side, I've used After Effects,
+          Blueprints, Figma, Godot, Houdini, Illustrator, InDesign, Maya,
+          Renderman, Substance, Photoshop, Unreal, Unity, and ZBrush.
         </Text>
       </Box>
 
