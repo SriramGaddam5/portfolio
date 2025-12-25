@@ -31,15 +31,20 @@ jobs:
 
       - name: Copy build files to root
         run: |
+          # Remove old build files (but keep source files)
+          rm -rf _next *.html 404.html project blog images
           # Copy all files from out/ to root
           cp -r out/* .
-          # Remove the out directory
-          rm -rf out
+          # Keep the out directory for reference
+          # rm -rf out
 
       - name: Commit and push built files
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add -A
+          # Force add _next folder in case it's ignored
+          git add -f _next/
+          git add -f *.html
           git commit -m "Deploy Next.js build [skip ci]" || echo "No changes to commit"
           git push
