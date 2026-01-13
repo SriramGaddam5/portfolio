@@ -26,7 +26,7 @@ const AboutPage = () => (
           best way to learn is to build something.
         </Text>
         <Text fontSize="lg" color="gray.300">
-          I'm current a student at Texas A&M University, studying Visualization
+          I'm currently a senior at Texas A&M University, studying Visualization
           with experience with both software, frontend, and game development. On
           the software side, I've used Arduino, Agile, AWS, C#, C++, CSS,
           Docker, Firebase, Git, HLSL, HTML, Java, Kotlin, JavaScript (Node.js,
