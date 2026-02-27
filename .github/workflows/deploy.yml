@@ -33,8 +33,9 @@ jobs:
         run: |
           # Remove old build files (but keep source files)
           rm -rf _next *.html 404.html project blog images
-          # Copy all files from out/ to root
+          # Copy all files from out/ to root (including hidden files like .nojekyll)
           cp -r out/* .
+          cp out/.nojekyll . 2>/dev/null || true
           # Keep the out directory for reference
           # rm -rf out
 
@@ -46,5 +47,7 @@ jobs:
           # Force add _next folder in case it's ignored
           git add -f _next/
           git add -f *.html
+          # Ensure .nojekyll is committed (GitHub Pages needs it to serve _next/)
+          git add -f .nojekyll
           git commit -m "Deploy Next.js build [skip ci]" || echo "No changes to commit"
           git push
