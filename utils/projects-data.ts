@@ -98,4 +98,18 @@ export const projects: Project[] = [
       "https://img.itch.zone/aW1nLzI0MTM2NDU5LnBuZw==/original/f8ZcmK.png",
     tags: ["Video game"],
   },
+  {
+    id: "project-7",
+    date: "2-29-2026",
+    slug: "clockout",
+    title: "CLOCKOUT",
+    description: 
+    "A 2D pixel art precision platformer made in 48 hours for Chillennium 2026",
+    technologies: ["Godot", "GDScript", "Aseprite", "Photoshop"],
+    colorScheme: "gray",
+    link: "https://official-itchio.itch.io/clockout",
+    coverImage:
+      "https://img.itch.zone/aW1nLzI1NzIzNTc2LmpwZw==/original/Px4wbx.jpg",
+    tags: ["Video game", "Game jam"],
+  }
 ];

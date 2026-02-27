@@ -6,41 +6,47 @@ export interface TechColor {
 
 export const techColors: TechColor[] = [
   // Programming Languages
-  { name: "JavaScript", colorScheme: "yellow", category: "language" },
-  { name: "TypeScript", colorScheme: "blue", category: "language" },
-  { name: "Python", colorScheme: "green", category: "language" },
-  { name: "Kotlin", colorScheme: "purple", category: "language" },
-  { name: "C++", colorScheme: "pink", category: "language" },
-  { name: "Ruby", colorScheme: "red", category: "language" },
+  { name: 'JavaScript', colorScheme: 'yellow', category: 'language' },
+  { name: 'TypeScript', colorScheme: 'blue', category: 'language' },
+  { name: 'Python', colorScheme: 'green', category: 'language' },
+  { name: 'Kotlin', colorScheme: 'purple', category: 'language' },
+  { name: 'C++', colorScheme: 'pink', category: 'language' },
+  { name: 'C#', colorScheme: 'purple', category: 'language' },
+  { name: 'Ruby', colorScheme: 'red', category: 'language' },
+  { name: 'GDScript', colorScheme: 'blue', category: 'language' },
 
   // Frontend Technologies
-  { name: "React", colorScheme: "cyan", category: "frontend" },
-  { name: "HTML", colorScheme: "orange", category: "frontend" },
-  { name: "CSS", colorScheme: "blue", category: "frontend" },
+  { name: 'React', colorScheme: 'cyan', category: 'frontend' },
+  { name: 'HTML', colorScheme: 'orange', category: 'frontend' },
+  { name: 'CSS', colorScheme: 'blue', category: 'frontend' },
 
   // Development Tools
-  { name: "Android Studio", colorScheme: "green", category: "tool" },
-  { name: "Figma", colorScheme: "purple", category: "tool" },
-  { name: "Arduino", colorScheme: "teal", category: "tool" },
+  { name: 'Android Studio', colorScheme: 'green', category: 'tool' },
+  { name: 'Figma', colorScheme: 'purple', category: 'tool' },
+  { name: 'Arduino', colorScheme: 'teal', category: 'tool' },
+  { name: 'Godot', colorScheme: 'blue', category: 'tool' },
+  { name: 'Unity', colorScheme: 'gray', category: 'tool' },
+  { name: 'Aseprite', colorScheme: 'gray', category: 'tool' },
+  { name: 'Photoshop', colorScheme: 'blue', category: 'tool' },
 
   // Cloud & Infrastructure
-  { name: "AWS S3", colorScheme: "orange", category: "cloud" },
-  { name: "AWS Lambda", colorScheme: "orange", category: "cloud" },
-  { name: "AWS CloudWatch", colorScheme: "orange", category: "cloud" },
-  { name: "Jenkins", colorScheme: "red", category: "infrastructure" },
+  { name: 'AWS S3', colorScheme: 'green', category: 'cloud' },
+  { name: 'AWS Lambda', colorScheme: 'orange', category: 'cloud' },
+  { name: 'AWS CloudWatch', colorScheme: 'pink', category: 'cloud' },
+  { name: 'Jenkins', colorScheme: 'red', category: 'infrastructure' },
 
   // APIs & Services
-  { name: "Figma API", colorScheme: "purple", category: "api" },
-  { name: "JFrog Artifactory", colorScheme: "blue", category: "service" },
-  { name: "SauceLabs TestFairy", colorScheme: "green", category: "service" },
+  { name: 'Figma API', colorScheme: 'purple', category: 'api' },
+  { name: 'JFrog Artifactory', colorScheme: 'green', category: 'service' },
+  { name: 'SauceLabs TestFairy', colorScheme: 'green', category: 'service' },
 ];
 
 // Helper function to get color scheme for a technology
 export const getTechColor = (techName: string): string => {
   const tech = techColors.find(
-    (t) => t.name.toLowerCase() === techName.toLowerCase()
+    (t) => t.name.toLowerCase() === techName.toLowerCase(),
   );
-  return tech?.colorScheme || "gray"; // Default to gray if not found
+  return tech?.colorScheme || 'gray'; // Default to gray if not found
 };
 
 // Helper function to get all technologies by category

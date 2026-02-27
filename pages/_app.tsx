@@ -3,7 +3,7 @@ import { Provider } from "@/components/ui/provider";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <Provider attribute="class" disableTransitionOnChange>
+    <Provider forcedTheme="dark" attribute="class" disableTransitionOnChange>
       <Component {...pageProps} />
     </Provider>
   );
