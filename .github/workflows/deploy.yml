@@ -2,20 +2,25 @@ name: Build and Deploy Next.js
 
 on:
   push:
-    branches: ["main"] # Change to "master" if that's your default branch
+    branches: ["main"]
   workflow_dispatch:
 
+# One deployment at a time; newer runs replace in-progress deploys cleanly.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -29,25 +34,18 @@ jobs:
       - name: Build with Next.js
         run: npm run build
 
-      - name: Copy build files to root
-        run: |
-          # Remove old build files (but keep source files)
-          rm -rf _next *.html 404.html project blog images
-          # Copy all files from out/ to root (including hidden files like .nojekyll)
-          cp -r out/* .
-          cp out/.nojekyll . 2>/dev/null || true
-          # Keep the out directory for reference
-          # rm -rf out
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
 
-      - name: Commit and push built files
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add -A
-          # Force add _next folder in case it's ignored
-          git add -f _next/
-          git add -f *.html
-          # Ensure .nojekyll is committed (GitHub Pages needs it to serve _next/)
-          git add -f .nojekyll
-          git commit -m "Deploy Next.js build [skip ci]" || echo "No changes to commit"
-          git push
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

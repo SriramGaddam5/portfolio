@@ -15,8 +15,19 @@
 
 # next.js
 /.next/
-# Note: /out/ is not ignored because we copy built files to root for Domain Hosting
-# Built files in root are committed for Domain Hosting to serve
+/out/
+
+# Static export output (published via GitHub Actions, not committed)
+/_next/
+/.nojekyll
+/404.html
+/about.html
+/blog.html
+/index.html
+/blog/
+/project/
+/images/
+/CNAME
 
 # production
 /build
