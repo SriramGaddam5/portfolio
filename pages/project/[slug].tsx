@@ -42,7 +42,7 @@ const ProjectPage = () => {
   }
 
   return (
-    <Layout title={`${project.title} | Portfolio`}>
+    <Layout title={`${project.title} | Sriram Gaddam`}>
       <VStack gap={6} alignItems="start" maxW="900px" mx="auto">
         <Button size="sm" variant="ghost" colorScheme="blue">
           <Link href="/">← Back to Home</Link>

@@ -15,7 +15,7 @@ import Layout from "../../components/Layout";
 import { blogPosts } from "../../utils/blog-data";
 
 const BlogPage = () => (
-  <Layout title="Blog | Portfolio">
+  <Layout title="Blog | Sriram Gaddam">
     <VStack gap={8} alignItems="start">
       <Box>
         <Heading mb={4}>Blog</Heading>

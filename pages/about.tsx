@@ -14,7 +14,7 @@ import { workExperience } from "../utils/experience-data";
 import { getTechColor } from "../utils/tech-colors";
 
 const AboutPage = () => (
-  <Layout title="About | Portfolio">
+  <Layout title="About | Sriram Gaddam">
     <VStack gap={8} alignItems="start">
       <Box>
         <Heading mb={4}>About Me</Heading>

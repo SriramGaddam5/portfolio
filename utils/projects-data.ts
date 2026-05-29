@@ -118,7 +118,7 @@ export const projects: Project[] = [
     slug: 'stellar-harvest',
     title: 'Stellar Harvest',
     description:
-      'A space farming survival game where you grow crops across planets, defend against alien pests, and pay off debt to the Agricultural Space Society. PVZ meets Stardew Valley!',
+      'A space farming survival game where you plant crops, protect your farm from aliens, and pay off your debt!',
     technologies: ['Unity', 'C#', 'Photoshop'],
     colorScheme: 'blue',
     link: 'https://official-itchio.itch.io/stellar-harvest',

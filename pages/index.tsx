@@ -53,7 +53,7 @@ const IndexPage = () => {
   }, [searchQuery, selectedTech]);
 
   return (
-    <Layout title="Portfolio | Home">
+    <Layout title="Home | Sriram Gaddam">
       <VStack gap={8} alignItems="start">
         <Box>
           <Heading size="6xl" mb={4}>
@@ -121,7 +121,7 @@ const IndexPage = () => {
             gap={6}
             w="full"
           >
-            {[...filteredProjects].reverse().map((project) => (
+            {[...filteredProjects].reverse().map((project, index) => (
               <LinkBox
                 key={project.id}
                 as={Box}
@@ -151,6 +151,8 @@ const IndexPage = () => {
                     alt={`${project.title} cover image`}
                     fill
                     style={{ objectFit: "contain" }}
+                    priority={index < 4}
+                    loading={index < 4 ? "eager" : "lazy"}
                   />
                 </Box>
 

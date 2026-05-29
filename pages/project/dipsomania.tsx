@@ -16,7 +16,7 @@ import Layout from "../../components/Layout";
 
 const DipsomaniaPage = () => {
   return (
-    <Layout title="DIPSOMANIA | Portfolio">
+    <Layout title="DIPSOMANIA | Sriram Gaddam">
       <VStack gap={8} alignItems="start" maxW="1200px" mx="auto">
         <Button size="sm" variant="ghost" colorScheme="blue">
           <Link href="/">← Back to Home</Link>

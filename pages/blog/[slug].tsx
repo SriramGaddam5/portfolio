@@ -57,7 +57,7 @@ const BlogPostPage = () => {
   // Special handling for "how-to-get-a-job-in-tech" post
   if (slug === "how-to-get-a-job-in-tech") {
     return (
-      <Layout title={`${post.title} | Blog`}>
+      <Layout title={`${post.title} | Sriram Gaddam`}>
         <BlogProgressBar />
         <VStack gap={6} alignItems="start" maxW="900px" mx="auto">
           <Button size="sm" variant="ghost" colorScheme="blue">
